@@ -1,0 +1,63 @@
+{
+	"info": {
+		"_postman_id": "a11d4eb8-0ccd-4375-b63e-ac9927432959",
+		"name": "BCG DV Internship",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{url}}/api/v1/key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/v1/key",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{url}}/api/v1/submit?apiKey={{api_key}}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Rajiv Parajuli\",\r\n  \"email\": \"raziv.parazuli@gmail.com\"\t\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/api/v1/submit?apiKey={{api_key}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"submit"
+					],
+					"query": [
+						{
+							"key": "apiKey",
+							"value": "{{api_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
